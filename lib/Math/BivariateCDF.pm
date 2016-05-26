@@ -33,7 +33,7 @@ our @EXPORT = qw(
 	
 );
 
-our $VERSION = '0.01';
+our $VERSION = '0.01_1';
 
 sub AUTOLOAD {
     # This AUTOLOAD is used to 'autoload' constants from the constant()
@@ -67,24 +67,19 @@ XSLoader::load('Math::BivariateCDF', $VERSION);
 
 1;
 __END__
-# Below is stub documentation for your module. You'd better edit it!
+# Below is stub documentation for your module.
 
 =head1 NAME
 
-Math::BivariateCDF - Perl extension for blah blah blah
+Math::BivariateCDF - Perl extension for Bivariate CDF functions.
 
 =head1 SYNOPSIS
 
   use Math::BivariateCDF;
-  blah blah blah
 
 =head1 DESCRIPTION
 
-Stub documentation for Math::BivariateCDF, created by h2xs. It looks like the
-author of the extension was negligent enough to leave the stub
-unedited.
-
-Blah blah blah.
+Stub documentation for Math::BivariateCDF, created by h2xs. 
 
 =head2 EXPORT
 
