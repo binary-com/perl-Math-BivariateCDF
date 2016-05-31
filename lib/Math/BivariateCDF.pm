@@ -67,7 +67,7 @@ XSLoader::load('Math::BivariateCDF', $VERSION);
 
 1;
 __END__
-# Below is stub documentation for your module.
+
 
 =head1 NAME
 
@@ -77,13 +77,14 @@ Math::BivariateCDF - Perl extension for Bivariate CDF functions.
 
   use Math::BivariateCDF;
 
+  Math::BivariateCDF::bivnor( $x, $y, $z );
+
 =head1 DESCRIPTION
 
-Stub documentation for Math::BivariateCDF, created by h2xs. 
+This is a Perl wrapper for TOMS462 C library which evaluates the upper right tail of the bivariate normal distribution; that is, the probability that normal variables X and Y with correlation R will satisfy H <= X and K <= Y.
 
 =head2 EXPORT
 
-None by default.
 
 =head2 Exportable functions
 
@@ -100,18 +101,11 @@ None by default.
 
 =head1 SEE ALSO
 
-Mention other useful documentation such as the documentation of
-related modules or operating system documentation (such as man pages
-in UNIX), or any relevant external documentation such as RFCs or
-standards.
-
-If you have a mailing list set up for your module, mention it here.
-
-If you have a web site set up for your module, mention it here.
+https://people.sc.fsu.edu/~jburkardt/c_src/toms462/toms462.html
 
 =head1 AUTHOR
 
-root, E<lt>root@E<gt>
+binary.com, E<lt>support@binary.com<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
