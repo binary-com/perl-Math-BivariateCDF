@@ -17,20 +17,15 @@ our @ISA = qw(Exporter);
 # This allows declaration	use Math::BivariateCDF ':all';
 # If you do not need this, moving things directly into @EXPORT or @EXPORT_OK
 # will save memory.
-our %EXPORT_TAGS = ( 'all' => [ qw(
-	bivariate_normal_cdf_values
-	bivnor
-	gauss
-	r8_abs
-	r8_max
-	r8_min
-	timestamp
-) ] );
+our %EXPORT_TAGS = (
+    'all' => [qw(
+            bivnor
+            )]);
 
-our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
+our @EXPORT_OK = (@{$EXPORT_TAGS{'all'}});
 
 our @EXPORT = qw(
-	
+
 );
 
 our $VERSION = '0.01_1';
@@ -45,7 +40,6 @@ XSLoader::load('Math::BivariateCDF', $VERSION);
 1;
 __END__
 
-
 =head1 NAME
 
 Math::BivariateCDF - Perl extension for Bivariate CDF functions.
@@ -58,21 +52,14 @@ Math::BivariateCDF - Perl extension for Bivariate CDF functions.
 
 =head1 DESCRIPTION
 
-This is a Perl wrapper for TOMS462 C library which evaluates the upper right tail of the bivariate normal distribution; that is, the probability that normal variables X and Y with correlation R will satisfy H <= X and K <= Y.
+This is a Perl wrapper for TOMS462 C library which evaluates the upper right tail of the bivariate normal distribution.
 
 =head2 EXPORT
 
 
 =head2 Exportable functions
 
-  void bivariate_normal_cdf_values ( int *n_data, double *x, double *y,
-  double *r, double *fxy )
   double bivnor ( double ah, double ak, double r )
-  double gauss ( double t )
-  double r8_abs ( double x )
-  double r8_max ( double x, double y )
-  double r8_min ( double x, double y )
-  void timestamp ( void )
 
 
 
@@ -86,11 +73,9 @@ binary.com, E<lt>support@binary.com<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2016 by root
+Copyright (C) 2016 by binary.com.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.14.2 or,
-at your option, any later version of Perl 5 you may have available.
+This module are distributed under the GNU LGPL license.
 
 
 =cut
