@@ -12,37 +12,27 @@ MODULE = Math::BivariateCDF		PACKAGE = Math::BivariateCDF
 
 INCLUDE: const-xs.inc
 
-void
-bivariate_normal_cdf_values(n_data, x, y, r, fxy)
-	int *	n_data
-	double *	x
-	double *	y
-	double *	r
-	double *	fxy
 
-double
+NV
 bivnor(ah, ak, r)
-	double	ah
-	double	ak
-	double	r
+	NV	ah
+	NV	ak
+	NV	r
 
-double
+NV
 gauss(t)
-	double	t
+	NV	t
 
-double
+NV
 r8_abs(x)
-	double	x
+	NV	x
 
-double
+NV
 r8_max(x, y)
-	double	x
-	double	y
+	NV	x
+	NV	y
 
-double
+NV
 r8_min(x, y)
-	double	x
-	double	y
-
-void
-timestamp()
+	NV	x
+	NV	y
