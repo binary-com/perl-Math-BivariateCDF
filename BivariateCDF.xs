@@ -6,11 +6,8 @@
 
 #include <toms462.h>
 
-#include "const-c.inc"
-
 MODULE = Math::BivariateCDF		PACKAGE = Math::BivariateCDF		
 
-INCLUDE: const-xs.inc
 
 
 NV
