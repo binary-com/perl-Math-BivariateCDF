@@ -15,9 +15,3 @@ WriteMakefile(
     OBJECT            => '$(O_FILES)', # link all the C files too
 );
 
-#use File::Copy;
-#use File::Spec;
-#foreach my $file ('const-c.inc', 'const-xs.inc') {
-#  my $fallback = File::Spec->catfile('fallback', $file);
-#  copy ($fallback, $file) or die "Can't copy $fallback to $file: $!";
-#}
