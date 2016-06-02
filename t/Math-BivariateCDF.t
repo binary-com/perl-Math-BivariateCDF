@@ -2,9 +2,8 @@ use strict;
 use warnings;
 
 use Test::More tests => 24;
-use Test::Warnings 0.005 ':all';
- 
-#like(warning { warn "oh noes!" }, qr/^oh noes/, 'we warned');
+use Test::Warnings ':all';
+
 
 BEGIN { use_ok('Math::BivariateCDF') }
 
