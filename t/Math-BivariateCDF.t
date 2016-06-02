@@ -54,7 +54,7 @@ ok( !$@, "bivnor() doesn not cause exception" );
 eval { Math::BivariateCDF::bivnor(0,0.1,0.1); };
 ok( !$@, "bivnor() doesn not cause exception" );
 
-like(warning { Math::BivariateCDF::bivnor(0,0.1,'s') }, qr/^numeric/, 'Argument is not numeric warning');
+like(warning { Math::BivariateCDF::bivnor(0,0.1,'s') }, qr/^Argument "s" isn't numeric in subroutine entry at t/Math-BivariateCDF.t line 57./, 'Argument is not numeric warning');
 
 # ============================================================
 
