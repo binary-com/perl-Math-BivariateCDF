@@ -1,8 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 19;
-
+use Test::More tests => 21;
 
 BEGIN { use_ok('Math::BivariateCDF') }
 
@@ -43,6 +42,8 @@ for (@vals) {
     ok(almost(Math::BivariateCDF::bivnor($x, $y, $z), $w, 1e-15), "bivnor($x, $y, $z)==$w");
 }
 
+eval { Math::BivariateCDF::bivnor(0.1,0.1,'s'); };
+ok( $@, "bivnor() causes exception" );
 
 # ============================================================
 
