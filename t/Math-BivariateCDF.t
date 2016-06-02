@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 19;
+use Test::More tests => 20;
 
 
 BEGIN { use_ok('Math::BivariateCDF') }
@@ -43,6 +43,8 @@ for (@vals) {
     ok(almost(Math::BivariateCDF::bivnor($x, $y, $z), $w, 1e-15), "bivnor($x, $y, $z)==$w");
 }
 
+my $exception1 = Math::BivariateCDF::bivnor( 0.1, 0.1, 'test');
+ok !$exception, 'caught exception';
 
 # ============================================================
 
