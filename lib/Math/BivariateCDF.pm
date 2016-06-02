@@ -28,7 +28,7 @@ our @EXPORT = qw(
 
 );
 
-our $VERSION = '0.01_1';
+our $VERSION = '0.01';
 
 require XSLoader;
 XSLoader::load('Math::BivariateCDF', $VERSION);
