@@ -48,9 +48,9 @@ Math::BivariateCDF - Perl extension for Bivariate CDF functions.
 
   use Math::BivariateCDF qw(bivnor);
 
-  my $cdf = Math::BivariateCDF::bivnor( $x, $y, $z );
+  my $cdf = Math::BivariateCDF::bivnor( 0.036412293026205, 0.0708220179920969, 0.734208757779421 );
 
-  print $cdf; #
+  print $cdf; #0.359905409368831
 
 =head1 DESCRIPTION
 
