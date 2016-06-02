@@ -3,8 +3,17 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     NAME              => 'Math::BivariateCDF',
-    VERSION_FROM      => 'lib/Math/BivariateCDF.pm', 
-    PREREQ_PM         => {}, # e.g., Module::Name => 1.1
+    VERSION_FROM      => 'lib/Math/BivariateCDF.pm',
+    CONFIGURE_REQUIRES => {
+                "ExtUtils::MakeMaker" => 0,
+    },
+    BUILD_REQUIRES => {
+                'Test::More'  => 0,
+    },
+    PREREQ_PM => {
+                "ExtUtils::MakeMaker" => 0,
+                'Test::More'          => 0,
+    },
     ($] >= 5.005 ?     
       (ABSTRACT_FROM  => 'lib/Math/BivariateCDF.pm', 
        AUTHOR         => 'Binary.com <support@binary.com>') : ()),
