@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 25;
+use Test::More tests => 22;
 
 BEGIN { use_ok('Math::BivariateCDF') }
 
