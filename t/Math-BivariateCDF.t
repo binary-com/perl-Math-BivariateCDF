@@ -1,7 +1,10 @@
 use strict;
 use warnings;
 
-use Test::More tests => 21;
+use Test::More tests => 19;
+use Test::Exception tests => 1;
+
+
 BEGIN { use_ok('Math::BivariateCDF') }
 
 #########################
@@ -42,7 +45,8 @@ for (@vals) {
 }
 
 eval { Math::BivariateCDF::bivnor( 0.1, 0.1, 'test' ); };
-ok( $@, "inv_cdf(0) causes exception" );
+
+throws_ok { Math::BivariateCDF::bivnor( 0.1, 0.1, 'test' ); } qr/"test" isn't numeric/, 'exception caught';
 
 # ============================================================
 
