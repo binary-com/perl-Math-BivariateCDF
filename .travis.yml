@@ -13,6 +13,5 @@ before_install:
     - build-perl
     - perl -V
     - "cpanm Test::More"
-    - "cpanm Test::Exception"
 script:
     perl Makefile.PL && make test
