@@ -2,6 +2,9 @@ use strict;
 use warnings;
 
 use Test::More tests => 22;
+use Test::Warnings 0.005 ':all';
+ 
+#like(warning { warn "oh noes!" }, qr/^oh noes/, 'we warned');
 
 BEGIN { use_ok('Math::BivariateCDF') }
 
@@ -50,6 +53,8 @@ ok( !$@, "bivnor() doesn not cause exception" );
 
 eval { Math::BivariateCDF::bivnor(0,0.1,0.1); };
 ok( !$@, "bivnor() doesn not cause exception" );
+
+like(warning { Math::BivariateCDF::bivnor(0,0.1,'s') }, qr/^numeric/, 'Argument is not numeric warning');
 
 # ============================================================
 
