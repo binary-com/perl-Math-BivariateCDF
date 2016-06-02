@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 22;
+use Test::More tests => 24;
 use Test::Warnings 0.005 ':all';
  
 #like(warning { warn "oh noes!" }, qr/^oh noes/, 'we warned');
