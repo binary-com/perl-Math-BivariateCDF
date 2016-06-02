@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 21;
+use Test::More tests => 25;
 
 BEGIN { use_ok('Math::BivariateCDF') }
 
@@ -43,7 +43,13 @@ for (@vals) {
 }
 
 eval { Math::BivariateCDF::bivnor(0.1,0.1,0); };
-ok( $@, "bivnor() causes exception" );
+ok( !$@, "bivnor() doesn not cause exception" );
+
+eval { Math::BivariateCDF::bivnor(0.1,0,0.1); };
+ok( !$@, "bivnor() doesn not cause exception" );
+
+eval { Math::BivariateCDF::bivnor(0,0.1,0.1); };
+ok( !$@, "bivnor() doesn not cause exception" );
 
 # ============================================================
 
