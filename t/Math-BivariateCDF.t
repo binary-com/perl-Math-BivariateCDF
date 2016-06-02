@@ -44,7 +44,7 @@ for (@vals) {
 }
 
 my $exception1 = Math::BivariateCDF::bivnor( 0.1, 0.1, 'test');
-ok !$exception, 'caught exception';
+ok !$exception1, 'caught exception';
 
 # ============================================================
 
