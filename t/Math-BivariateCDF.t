@@ -41,6 +41,9 @@ for (@vals) {
     ok(almost(Math::BivariateCDF::bivnor($x, $y, $z), $w, 1e-15), "bivnor($x, $y, $z)==$w");
 }
 
+eval { Math::BivariateCDF::bivnor( 0.1, 0.1, 'test' ); };
+ok( $@, "inv_cdf(0) causes exception" );
+
 # ============================================================
 
 done_testing();
