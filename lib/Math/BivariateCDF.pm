@@ -1,12 +1,10 @@
 package Math::BivariateCDF;
 
-use 5.014002;
 use strict;
 use warnings;
 use Carp;
 
 require Exporter;
-use AutoLoader;
 
 our @ISA = qw(Exporter);
 
@@ -55,6 +53,7 @@ Math::BivariateCDF - Perl extension for Bivariate CDF functions.
 =head1 DESCRIPTION
 
 This is a Perl wrapper for TOMS462 C library which evaluates the upper right tail of the bivariate normal distribution.
+Wikipedia: https://en.wikipedia.org/wiki/Multivariate_normal_distribution#Bivariate_case .
 
 =head2 EXPORT
 
