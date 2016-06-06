@@ -53,6 +53,9 @@ ok( !$@, "bivnor() doesn not cause exception" );
 eval { Math::BivariateCDF::bivnor(0,0.1,0.1); };
 ok( !$@, "bivnor() doesn not cause exception" );
 
+eval { Math::BivariateCDF::bivnor( 0, 0, -1.1 ); };
+like( $@, qr/evaluate/, "r less than -1 causes exception" );
+
 like(warning { Math::BivariateCDF::bivnor(0,0.1,'s') }, qr/numeric/, 'Argument is not numeric warning');
 
 # ============================================================
