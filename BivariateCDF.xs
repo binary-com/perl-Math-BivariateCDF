@@ -15,3 +15,11 @@ bivnor(ah, ak, r)
 	NV	ah
 	NV	ak
 	NV	r
+    CODE:
+        if (r >= 1) {
+          Perl_croak(aTHX_ "Can't evaluate Math::BivariateCDF::bivnor for $r>=%f ", r );
+        }
+
+        RETVAL = bivnor(ah, ak, r);
+    OUTPUT:
+        RETVAL
