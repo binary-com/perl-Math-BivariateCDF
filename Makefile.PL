@@ -14,7 +14,6 @@ WriteMakefile(
     PREREQ_PM => {
                 "ExtUtils::MakeMaker" => 0,
                 'Test::More'          => 0,
-                'Test::Warnings'      => 0,
     },
     ($] >= 5.005 ?     
       (ABSTRACT_FROM  => 'lib/Math/BivariateCDF.pm', 
