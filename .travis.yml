@@ -16,5 +16,7 @@ before_install:
     - perl -V
     - "cpanm Test::More"
     - "cpanm Test::Warnings"
+    - "cpanm -qn Test::Requires::Git"
+    - "cpanm -qn Devel::Cover::Report::Codecov"
 script:
-    perl Makefile.PL && make test
+    perl Makefile.PL && make test && cover -test -report codecov
