@@ -4,7 +4,7 @@
 
 #include "ppport.h"
 
-#include <toms462.h>
+#include "toms462.h"
 
 MODULE = Math::BivariateCDF		PACKAGE = Math::BivariateCDF		
 
