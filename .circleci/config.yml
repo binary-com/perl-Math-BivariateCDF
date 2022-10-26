@@ -36,6 +36,7 @@ jobs:
       - run:
           name: Run Tests
           command: |
+            dzil build
             dzil smoke --release --author && dzil cover -test -report codecov && dzil xtest
   release:
     docker:
